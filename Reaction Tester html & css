@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning Javascript</title>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <style>
+    
+        #box {
+            height: 50px;
+            width: 50px;
+            display: none;
+            background-color: red; 
+            
+    
+        }
+        
+    
+    </style>
+  
+    
+</head>
+    
+<body>
+    
+    <div id="react">
+        
+        <p>Your reaction time was <span id="reactTime"></span></p>
+    
+    </div>
+    
+    
+    <div id="box"> </div> 
+    
+    </body>
+</html>
