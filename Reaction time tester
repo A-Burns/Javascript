@@ -1,0 +1,75 @@
+var clickedTime; var createdTime; var reactionTime;
+     
+    function boxAppear() {
+
+
+        var timer=Math.random();
+
+        timer=timer*5000;
+
+        setTimeout(function() { 
+            
+            //Shape randomiser
+
+            if (Math.random()>0.5) {
+
+            document.getElementById("box").style.borderRadius="25px";    
+
+            } else {
+            document.getElementById("box").style.borderRadius="0px";
+            }
+            
+            //Position Randomiser - left to right
+            
+             if (Math.random()>0.5) {
+                
+                document.getElementById("box").style.marginLeft="20px";
+                
+            } else {
+                
+                document.getElementById("box").style.marginLeft="80px";
+                
+            }
+            
+            //postion randomiser - up and down
+            
+            if (Math.random()>0.5) {
+                
+                document.getElementById("box").style.marginTop="30px";
+                
+            } else {
+                
+                document.getElementById("box").style.marginTop="120px";
+                
+            }
+           
+           
+
+            document.getElementById("box").style.display="block";
+
+            createdTime=Date.now();   
+
+        }, timer);
+
+        }
+    
+    //reset when clicked
+
+    document.getElementById("box").onclick=function() {
+
+        clickedTime=Date.now();
+
+        reactionTime=(clickedTime-createdTime)/1000;
+
+        document.getElementById("reactTime").innerHTML=reactionTime+" seconds!";
+
+
+        this.style.display="none"
+
+        boxAppear();
+
+    }
+
+    boxAppear();
+
+    
