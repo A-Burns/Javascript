@@ -1,0 +1,49 @@
+/*
+SPOILER ALERT
+Solution to the FreeCodeCamp Mutations Algorithm (251) is below, maybe not the most condensed solution but it worked.
+Tip 1-Break the arguments down into individual characters
+Tip 2-Iterate through each character in the second argument 
+Tip 3-Use indexOf() to test if each character(in 2nd argument) appears in the 1st argument 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function mutation(arr) {
+  
+ var str0 = arr[0].toLowerCase();
+ var str1 = arr[1].toLowerCase();
+ var arr0 = str0.split("");
+ var arr1 = str1.split("");
+ var count = 0;
+
+  for (i=0;i<arr1.length;i++) {
+    if (arr0.indexOf(arr1[i]) < 0) {
+      return false; 
+    } else {
+      count++;
+    } // else close  
+    
+    if (count == arr1.length) {
+      return true;
+      } // if close
+     
+  } // for loop close
+  
+} // function close
+
+
+
+mutation(["hEllo", "HE"]);
